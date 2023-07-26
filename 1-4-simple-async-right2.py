@@ -18,7 +18,8 @@ async def sum(name, numbers):
 
 # เขียนฟังชันด์ main ให้ sum task
 async def main():
-    await asyncio.gather(sum("A", [1,2]), 
+    await asyncio.gather(sum("A", [1,2]),
+                         sum("B", [1, 2, 3])) 
 
 #เขียนรูปแบบให้ คำนวณเวลาที่ใช้ทำ main()
 # แล้วแสดงผลเวลาออกมา
