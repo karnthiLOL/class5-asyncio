@@ -33,3 +33,9 @@ if __name__ == "__main__":
     start_time = time.perf_counter()
     asyncio.run(async_io())
     print(f"Finished in {round(time.perf_counter() - start_time)} secs")
+
+## คำนวณเวลาทำงาน 
+# คิด my_compute_time อย่างเดียว เพราะแบบ async จะไม่สน client เลยไม่คิด opponent_compute_time ใน move_pairs 1 รอบ
+# แปลว่ากระดานนี้จะใช้เวลาต่อ 1 กระดาน = 5 x 30 = 150 วินาที
+# ซึ่งมีทั้งหมด 24 กระดาน จึงใช้เวลาทั้งหมด 150 x 24 = 3600 วินาที ซึ่งเท่ากับ 1 ชั่วโมง
+# ดังนั้นใช้เวลาทั้งหมดในแบบ sync = 1 Hr
